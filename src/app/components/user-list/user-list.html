@@ -1,0 +1,13 @@
+<h2>User Management</h2>
+
+<form (ngSubmit)="addUser()" #userForm="ngForm">
+  <input type="text" [(ngModel)]="newUser.name" name="name" placeholder="Name" required>
+  <input type="email" [(ngModel)]="newUser.email" name="email" placeholder="Email" required>
+  <button type="submit">Add User</button>
+</form>
+
+<ul>
+  <li *ngFor="let user of users">
+    {{ user.name }} - {{ user.email }}
+  </li>
+</ul>
